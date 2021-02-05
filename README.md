@@ -1,3 +1,0 @@
-# TTMC
-
-Projet Java
