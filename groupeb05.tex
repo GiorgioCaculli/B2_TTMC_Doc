@@ -1,5 +1,6 @@
 \documentclass[10pt]{article}
 
+\usepackage{adjustbox}
 \usepackage{amsmath}
 \usepackage[french, onelanguage]{algorithm2e}
 \usepackage[utf8]{inputenc}
@@ -17,10 +18,16 @@
 \usepackage{tocloft}
 \usepackage{verbatim}
 \usepackage{xcolor}
+%\usepackage[pdf]{pstricks}
+%\usepackage{auto-pst-pdf}
+%\usepackage{uml}
 
 \makeglossaries
 
 \newacronym{ram}{RAM}{Random Access Memory}
+\newacronym{jdk}{JDK}{Java Development Kit}
+\newacronym{json}{JSON}{JavaScript Oriented Notion}
+\newacronym{ttmc}{TTMC}{Tu te mets combien?}
 
 \usetikzlibrary{calc, shapes.multipart, chains, arrows}
 
@@ -49,8 +56,8 @@
   top=20mm,
 }
 
-\title{Documentation TTMC}
-\author{Giorgio Caculli LA196672, Guillaume Lambert LA198116, Tanguy Taminiau LA199566}
+\title{Tu te mets combien?}
+\author{Giorgio Caculli LA196672, Guillaume Lambert LA198116, Tanguy Taminiau LA199566 \\ Groupe B05}
 \date{\today}
 
 \begin{document}
@@ -77,6 +84,7 @@
 
 \section{Diagramme de classe}
 \input{diagramme}
+
 
 \section{Plan de sortie}
 \input{plan}
