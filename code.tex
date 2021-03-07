@@ -1,0 +1,47 @@
+Code les plus représentatifs du Sprint 1
+\begin{lstlisting}
+public Scene JeuReponses()
+    {
+        JeuReponse jr = new JeuReponse();
+        jr.setLblQuestion( bc.getQuestions().get( id ).getChallenge() );
+        jr.setLblTheme( bc.getTheme().toString() );
+        jr.setLblSujet( bc.getSubject() );
+        jr.getBtnVal().setOnAction( new EventHandler< ActionEvent >()
+        {
+
+            @Override
+            public void handle( ActionEvent arg0 )
+            {
+                if( jr.getTxtRep().getText().equalsIgnoreCase( bc.getQuestions().get( id ).getAnswer() ) )
+                {
+                    Alert alert = new Alert( AlertType.INFORMATION, "Brava tu as reussi !" );
+                    alert.setTitle( "Resultats" );
+                    String path = "/be/helha/ttmc/assets/images/banana.gif";
+                    ImageView icon = new ImageView( path );
+                    icon.setFitHeight( 64 );
+                    icon.setFitWidth( 64 );
+                    alert.getDialogPane().setGraphic( icon );
+                    alert.setHeaderText( null );
+                    alert.showAndWait();
+                }else
+                {
+                    Alert alert = new Alert( AlertType.INFORMATION, "La reponse etait : "
+                            + bc.getQuestions().get( id ).getAnswer() );
+                    alert.setTitle( "Resultats" );
+                    ImageView icon = new ImageView( "/be/helha/ttmc/assets/images/sonicPleure.gif" );
+                    icon.setFitHeight( 64 );
+                    icon.setFitWidth( 64 );
+                    alert.getDialogPane().setGraphic( icon );
+                    alert.setHeaderText( null );
+                    alert.showAndWait();
+                    System.out.println( "nope" );
+                }
+                stage.setScene( JouerChoix() );
+            }
+        } );
+
+        return new Scene( jr );
+    }
+\end{lstlisting}
+
+Ce code permet d'afficher le thème, le sujet, et la question qui va être posée ainsi qu'un TextField qui permettra d'introduire une réponse. Lors de l'activation du bouton de confirmation de la réponse, le joueur recevra un message d'alerte qui lui indiquera si la réponse est correcte ou érronée.
