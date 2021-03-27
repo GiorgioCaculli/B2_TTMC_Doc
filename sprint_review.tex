@@ -1,15 +1,18 @@
-Durant ce premier sprint, concernant le code,
-\begin{itemize}
-	\item Les classes Questions, Themes, Deck et BasicCard permettant de créer ces différents objets sont opérationnels.
-	\item La sérialisation et la désérialisation du fichier "deck.json" permettant de sauvagarder dans un fichier les modifications faites au deck ( donc, les cartes ajoutées, retirées ou modifiées).
-	\item Une gestion basique des erreurs concernant les doublons de cartes, de questions, de decks ainsi que la gestion d'une erreur cernant une question incompatible avec un thème donné lors d'une modification de carte. 
-	\item Quelque tests unitaires concernant les méthodes des classes BasicCard, Deck ainsi que Question.
-\end{itemize}
-
-Quelques interfaces graphiques ont également déjà été créé. 
-\begin{itemize}
-	\item Le menu principal permettant de naviguer dans le programme.
-	\item Le menu "admin panel" permettant de gérer le jeu tels qu'ajouter une carte ou voire toute les cartes.
-	\item L'interface "add a card" permettant d'ajouter une carte une fois tous les textfields remplies.
-	\item L'interface permettant de voir les différentes carte créées trié par thème et auteur ( accessible depuis "l'admin panel" dans "show the list of cars").
-\end{itemize}
+Durant ce deuxième sprint,\\
+Nous avons créé de nouvelle interactions entre l'utilisateur et le logiciel de jeux. Nous avons dévellopé une interface pour 
+afficher les cartes (visible depuis le menu administrateur). Une nouvelle fonctionnalité concernant la gestion des cartes a également 
+été programmer, il s'agit de la possibilité de supprimer une carte du deck. Autre changement concernant la gestion des cartes, 
+l'interface permettant de modifier les cartes est également faites. Le jeu lui-même a également bénéficier d'ajout telle qu'un système 
+de score. Un multi joueur local à aussi été créé (pour le moment uniquement en 1V1). Le jeu prend en charge les pseudo pour une partie 
+multi joueur local tout comme pour une partie solo. Un menu pause à également été créé, celui-ci permet de mettre en pause la partie.
+Depuis ce menu, il est possible soit de reprendre la partie ou de quitter le jeu. Des animation et un timer ont été rajouter afin de 
+rendre le jeu plus intéressant et dynamique. Afin de rendre le jeu agréable nous avons ajouter une playlist de musique ainsi que 
+quelque fonctionnalité pour pouvoir gérer celle-ci.Dernière modification concernant le jeu, l'interface de jeu prend comme couleur de 
+fond la couleur du thème de la carte tiré ( c'est à dire que lors du choix de la difficulté de la question ou lors d'y répondre, la 
+couleurde fond de l'interface est coloré en rapport avec la carte tiré). Des interaction clavier logiciel ont été créé, notamment, il 
+est dès lors possible de faire apparaitre le menu pause grace à la touche escape ainsi que d'utiliser la touche "enter" pour valider 
+un choix. Pour améliorer la sécurité du jeu, la programmation de la fenêtre de login est faite. Nous avons décider de créé un launcher 
+pour notre jeu permettant au utilisateur n'ayant pas JavaFX de pouvoir quand même y joué.\\
+Une partie du travail fait durant se sprint 2 a également été de modifier quelque partie du code afin de satisfaire le PO.
+Nous avons fait une conversion total du code afin d'éviter d'utiliser plusieurs "scène", la nouvelle solution mise en place est
+l'utilisation d'une seule "scène" conbiné à plusieurs Stackpanes.  
