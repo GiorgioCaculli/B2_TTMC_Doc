@@ -1,47 +1,41 @@
 Code les plus représentatifs du Sprint 1
 \begin{lstlisting}
-public Scene JeuReponses()
+  public void setVisibleNode( String paneName )
+  {
+
+    for ( Node n : getStackPane().getChildren() )
     {
-        JeuReponse jr = new JeuReponse();
-        jr.setLblQuestion( bc.getQuestions().get( id ).getChallenge() );
-        jr.setLblTheme( bc.getTheme().toString() );
-        jr.setLblSujet( bc.getSubject() );
-        jr.getBtnVal().setOnAction( new EventHandler< ActionEvent >()
-        {
-
-            @Override
-            public void handle( ActionEvent arg0 )
-            {
-                if( jr.getTxtRep().getText().equalsIgnoreCase( bc.getQuestions().get( id ).getAnswer() ) )
-                {
-                    Alert alert = new Alert( AlertType.INFORMATION, "Brava tu as reussi !" );
-                    alert.setTitle( "Resultats" );
-                    String path = "/be/helha/ttmc/assets/images/banana.gif";
-                    ImageView icon = new ImageView( path );
-                    icon.setFitHeight( 64 );
-                    icon.setFitWidth( 64 );
-                    alert.getDialogPane().setGraphic( icon );
-                    alert.setHeaderText( null );
-                    alert.showAndWait();
-                }else
-                {
-                    Alert alert = new Alert( AlertType.INFORMATION, "La reponse etait : "
-                            + bc.getQuestions().get( id ).getAnswer() );
-                    alert.setTitle( "Resultats" );
-                    ImageView icon = new ImageView( "/be/helha/ttmc/assets/images/sonicPleure.gif" );
-                    icon.setFitHeight( 64 );
-                    icon.setFitWidth( 64 );
-                    alert.getDialogPane().setGraphic( icon );
-                    alert.setHeaderText( null );
-                    alert.showAndWait();
-                    System.out.println( "nope" );
-                }
-                stage.setScene( JouerChoix() );
-            }
-        } );
-
-        return new Scene( jr );
+      if ( n.getClass().getSimpleName().equals( paneName ) )
+      {
+        n.setVisible( true );
+      }
+      else
+      {
+        n.setVisible( false );
+      }
     }
+  }
+  
+
+  getStackPane().getChildren().add( new MenuPrincipalBP( d ) );
+  getStackPane().getChildren().add( new MenuPlayBP( d ) );
+  getStackPane().getChildren().add( new MenuAdminBP( d ) );
+
+  setVisibleNode( MenuPrincipalBP.class.getSimpleName() );
 \end{lstlisting}
 
-Ce code permet d'afficher le thème, le sujet, et la question qui va être posée ainsi qu'un TextField qui permettra d'introduire une réponse. Lors de l'activation du bouton de confirmation de la réponse, le joueur recevra un message d'alerte qui lui indiquera si la réponse est correcte ou érronée.
+Ce code permet de choisir quel Node le stackpane devrait rendre visible sur base d'une chaîne de caractère.
+Tous les autres Node seront cachés si le nom de la classe ne corréspond pas à celle qu'on souhaite visible.
+Indépendammente de l'ordre, la fonction sera capabe de rendre un seul Pane visible.
+
+Ici par exemple, une StackPane contient 3 Node:
+\begin{itemize}
+\item MenuPrincipalBP
+\item MenuPlayBP
+\item MenuAdminBP
+\end{itemize}
+
+Lors de l'appel de la fonction setVisibleNode, on prendra en paramètre une chaîne de caractère, soit le nom de la classe que l'on souhaite charger.
+
+On peut obtenir le nom de la classe sans faire aucune faute de frappe, en appelant fonction propre à chaque classe: \verb|getSimpleName()|.
+Grâce à cette fonction, peut importe la casse, le paneName introduit sera toujours celui du Node qu'on souhaite montrer.

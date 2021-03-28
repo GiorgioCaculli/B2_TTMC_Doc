@@ -9,16 +9,19 @@
 %}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{TTMC_Model_Diagram.png}
+	\includegraphics[width=\textwidth]{ttmc_modele.png}
 	\caption{Diagramme de classe du modèle}
 	\label{fig:diag_modele}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{DiagrammeClasseVue.png}
+	\includegraphics[width=\textwidth]{ttmc_vue.png}
 	\caption{Diagramme de classe de la vue}
 	\label{fig:diag_vue}
 \end{figure}
 
-Nous avons décidé de travailler avec le MainGui en position centrale. Lorsque nous changeons de scène via le click d’un bouton, nous modifions la scène via le .setScene() directement dans le MainGui. Ce qui nous permet d’avoir une répartition centralisée des modifications de scènes.
+Nous avons décidé de travailler avec le MainGui en position centrale.
+Lorsque nous changeons de menu via le click d’un bouton, nous modifions la scène via différents StackPane inclus dans les différents classes.
+Ce qui nous permet d’avoir une répartition plus flexible des menus ainsi qu'une plus grande liberté lors des instantiations des menus.
+Grâce aux StackPane, on a su faire plusieurs instantiations d'un même menus, ce qui nous a permis de démarrer des nouvelles parties à chaque instance d'une partie solo ou multi joueur.
