@@ -24,18 +24,18 @@ Code les plus représentatifs du Sprint 2
   setVisibleNode( MenuPrincipalBP.class.getSimpleName() );
 \end{lstlisting}
 
-Ce code permet de choisir quel Node le stackpane devrait rendre visible sur base d'une chaîne de caractère.
-Tous les autres Node seront cachés si le nom de la classe ne corréspond pas à celle qu'on souhaite visible.
-Indépendammente de l'ordre, la fonction sera capabe de rendre un seul Pane visible.
+Ce code permet de choisir quel Node le StackPane devrait rendre visible sur base d'une chaîne de caractères.
+Tous les autres Nodes seront cachés si le nom de la classe ne correspond pas à celle que l'on souhaite rendre visible.
+Indépendamment de l'ordre, la fonction sera capable de rendre un seul Node visible.
 
-Ici par exemple, une StackPane contient 3 Node:
+Ici par exemple, un StackPane contient 3 Nodes:
 \begin{itemize}
 \item MenuPrincipalBP
 \item MenuPlayBP
 \item MenuAdminBP
 \end{itemize}
 
-Lors de l'appel de la fonction setVisibleNode, on prendra en paramètre une chaîne de caractère, soit le nom de la classe que l'on souhaite charger.
+Lors de l'appel de la fonction setVisibleNode, on prendra en paramètre une chaîne de caractères, soit le nom de la classe que l'on souhaite afficher.
 
-On peut obtenir le nom de la classe sans faire aucune faute de frappe, en appelant fonction propre à chaque classe: \verb|getSimpleName()|.
-Grâce à cette fonction, peut importe la casse, le paneName introduit sera toujours celui du Node qu'on souhaite montrer.
+On peut obtenir le nom de la classe sans faire aucune faute de frappe, en appelant la fonction propre à chaque classe: \verb|getSimpleName()|.
+Grâce à cette fonction, peut importe la casse, la chaîne de caractères introduite sera toujours le nom du Node que l'on souhaite montrer.
