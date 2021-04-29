@@ -20,6 +20,7 @@
 \usepackage{tocloft}
 \usepackage{verbatim}
 \usepackage{xcolor}
+\usepackage{fancyhdr}
 %\usepackage[pdf]{pstricks}
 %\usepackage{auto-pst-pdf}
 %\usepackage{uml}
@@ -55,10 +56,18 @@
 
 \geometry{
   a4paper,
-  total={170mm,257mm},
+  total={170mm,237mm},
   left=20mm,
-  top=20mm,
+  top=30mm,
 }
+
+\pagestyle{fancy}
+\setlength{\headheight}{55.6pt}
+\addtolength{\topmargin}{-43.6pt}
+\setlength{\footskip}{60pt}
+\fancyhf{}
+\rhead{\includegraphics[width=4cm]{header.jpg}}
+\rfoot{\includegraphics[width=4cm]{footer.jpg}}
 
 \title{What do you know about it?}
 \author{Giorgio Caculli LA196672, Guillaume Lambert LA198116, Tanguy Taminiau LA199566 \\ Groupe B05}
