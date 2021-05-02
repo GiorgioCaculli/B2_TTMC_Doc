@@ -11,7 +11,7 @@ Les technologies suivantes ont été introduites lors du développement de notre
 \item l'utilisation de ResourceBundle afin de nous permettre d'instaurer un système d'internationalisation dans notre programme
 \end{itemize}
 Ces ne sont qu'une petite partie des technologies que nous avons mis en place pour notre programme.
-Afin d'assurer une meilleure portabilité de notre programme pour des gens qui n'utiliserait pas des arguments dans leur \acrshort{vm} de \verb|Java|, ou qui utiliseraient le \acrshort{jdk} de base, on a décidé de mettre en place un \enquote{launcher}.
-Ce dernier sert à détécter le système d'exploitation de l'utilisateur, sa version du \acrshort{jdk}, et l'endroit où il est en train de lancer le launcher.
+Afin d'assurer une meilleure portabilité de notre programme pour des gens n'utilisant pas d'arguments dans leur \acrshort{vm} de \verb|Java|, ou qui utiliseraient le \acrshort{jdk} de base, nous avons décidé de mettre en place un \enquote{launcher}.
+Ce dernier sert à détécter le système d'exploitation de l'utilisateur, sa version du \acrshort{jdk}, et l'endroit où il est en train de lancer le launcher-même.
 Une fois que toutes ces informations sont chargées, ce launcher va automatiquement lancer le jeu avec les paramètres nécéssaire pour faire fonctionner \verb|JavaFX|.
-Cette solutions a énormément simplifié le partage de notre application avec les \enquote{Beta Testers}.
+Cette solution a énormément simplifié le partage de notre application avec les \enquote{Beta Testers}.
