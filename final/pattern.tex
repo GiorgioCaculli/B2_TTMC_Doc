@@ -4,6 +4,7 @@
 
 \subsubsection{Explication générale}
 
+Tout d'abord, la "classe" musique présente sur le diagramme n'existe pas vraiment, mais nous avons décidé de la représenter quand même pour faciliter la compréhension. Cette "classe" représente juste le chemin d'accès, en String, à une musique.
 Au lancement du jeu, un objet MusicGestion va être instancié.
 Lors de cette instanciation, nous allons créer une liste de String, ces String sont des chemins d'accès relatif pour pouvoir accéder aux différentes musiques du jeu.
 Nous allons ensuite instancier un objet IteratorMusic qui prendra en paramètre cette liste.
@@ -26,7 +27,6 @@ Cette méthode permet de revenir directement au début de la liste, pour ainsi b
 \end{figure}
 
 \subsubsection{Extrait de code source}
-Tout d'abord, la "classe" musique présente sur le diagramme n'existe pas vraiment, mais nous avons décidé de la représenter quand même pour faciliter la compréhension. Cette "classe" représente juste le chemin d'accès, en String, à une musique.
 \lstinputlisting[language=Java]{IteratorMusic.java}
 
 \newpage
