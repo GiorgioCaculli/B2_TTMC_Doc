@@ -34,6 +34,21 @@ Tout d'abord, la "classe" musique présente sur le diagramme n'existe pas vraime
 
 \subsubsection{Explication générale}
 
+Notre objectif était de rendre notre programme plus accéssible aux gens que ne parlent pas l'anglais. Appliquer un concept d'internationalisation était alors notre objectif. Étant donné que l'on savait que le résultat obtenu ne se baserait que sur la langue chosie par l'utilisateur, le simple fait de savoir que les manipulations seraient exactement les mêmes, on a donc décidé de mettre en place le Design Pattern: Template Method. Voici le mécanisme:
+\begin{enumerate}
+\item Le programme detecte la langue choisie par l'utilisateur, si aucune langue a été choisie, alors le programme créera une nouvelle instance de English, soit, il mettra le jeu en anglais par défaut.
+\item Lors de l'instanciation des boutons ou différentes messages textuels, la fonction getString qui renverra la chaîne de caractère propre à ce dernier traduite dans la langue choisie.
+\end{enumerate}
+
+Si l'utilisateur choisi une langue différente, alors le programme fera une appel à la classe qui corréspond à la langue.
+Les différents cas possibles sont:
+\begin{itemize}
+\item English() pour l'anglais
+\item French() pour le français
+\item Italian() pour l'italien
+\item Japanese() pour le japonais
+\end{itemize}
+
 \subsubsection{Diagramme de classe}
 
 \begin{figure}[h]
