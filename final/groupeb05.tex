@@ -51,7 +51,11 @@
   showstringspaces=false,
   showtabs=false,
   tabsize=4,
-  autogobble=true
+  autogobble=true,
+  inputencoding=utf8,
+  extendedchars=false,
+  backgroundcolor=\color{gray!10},
+  texcl=true
 }
 
 \geometry{
@@ -72,56 +76,43 @@
 \begin{document}
 
 \begin{titlepage}
-	\centering
-	\vspace*{\fill}
-	\begin{center}
-		\Huge 
-		\textbf{What do you know about it? }\\
-		\vspace*{0.5cm}
-		\large
-		\textit{Giorgio Caculli LA196672, Guillaume Lambert LA198116, Tanguy Taminiau LA199566 \\ Groupe B05}
-		\vspace*{0.5cm}
-		\\ \today
-	\end{center}
-	\vspace*{\fill}
-	\thispagestyle{fancy}
+  \centering
+  \vspace*{\fill}
+  \begin{center}
+    \Huge 
+    \textbf{What do you know about it? }\\
+    \vspace*{0.5cm}
+    \large
+    \textit{Giorgio Caculli LA196672, Guillaume Lambert LA198116, Tanguy Taminiau LA199566 \\ Groupe B05}
+    \vspace*{0.5cm}
+    \\ \today
+  \end{center}
+  \vspace*{\fill}
+  \thispagestyle{fancy}
 \end{titlepage}	
 
 \newpage
 \tableofcontents
 \thispagestyle{fancy}
 
-\newpage
-\section*{Introduction}
-\label{sec:intro}
-\addcontentsline{toc}{section}{\nameref{sec:intro}}
 \input{intro}
 
-\section{Présentation du sujet}
 \input{sujet}
 
-\section{Description général de l'application}
 \input{description}
 
-\section{Analyse}
 \input{analyse}
 
-\section{Design pattern}
 \input{pattern}
 
-\section{Veille technologique}
 \input{technologie}
 
-\section{Implémentation}
 \input{implementation}
 
-\section{Test unitaires}
 \input{unitaire}
 
-\section{Conduite du projet}
 \input{conduite}
 
-\section{Conclusion}
 \input{conclusion}
 
 \newpage

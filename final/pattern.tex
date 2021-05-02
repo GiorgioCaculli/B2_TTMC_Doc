@@ -1,7 +1,50 @@
-\subsection{Explication générale}
+\newpage
+\section{Design pattern}
+\subsection{Iterator}
 
-\subsection{Diagramme de classe}
+\subsubsection{Explication générale}
 
-\subsection{Extrait de code source}
+Au lancement du jeu, un objet MusicGestion va être instancié.
+Lors de cette instanciation, nous allons créer une liste de String, ces String sont des chemins d'accès relatif pour pouvoir accéder aux différentes musiques du jeu.
+Nous allons ensuite instancier un objet IteratorMusic qui prendra en paramètre cette liste.
+Dans la méthode gererMusic, nous allons appeler la méthode item() de la classe IteratorMusic.
+Cette méthode nous permet de renvoyer l'objet sur lequel nous sommes actuellement en train d'interagir.
+Ensuite, la méthode gererThread va être appelée, cette méthode va faire appel à la méthode next() de la classe IteratorMusic.
+Celle-ci va permettre d'accéder à l'objet suivant dans la liste de l'itérator.
+La méthode gererMusic sera de nouveau appeler permettant ainsi d'avoir la musique suivante.
+Dans le cas où la liste de l'itérator a été entièrement parcourue, une condition, présente dans la méthode item() de la classe IteratorMusic, va appeler la méthode reset() présente dans cette même classe.
+Cette méthode permet de revenir directement au début de la liste, pour ainsi boucler sur celle-ci.
+
+
+\subsubsection{Diagramme de classe}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{ttmc_iterator.png}
+	\caption{Diagramme de l'iterator}
+	\label{fig:diag_iterator}
+\end{figure}
+
+\subsubsection{Extrait de code source}
+Tout d'abord, la "classe" musique présente sur le diagramme n'existe pas vraiment, mais nous avons décidé de la représenter quand même pour faciliter la compréhension. Cette "classe" représente juste le chemin d'accès, en String, à une musique.
+\lstinputlisting[language=Java]{IteratorMusic.java}
+
+\newpage
+\subsection{Template Method}
+
+\subsubsection{Explication générale}
+
+\subsubsection{Diagramme de classe}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{ttmc_template_method.png}
+	\caption{Diagramme du template method}
+	\label{fig:diag_template_method}
+\end{figure}
+
+\subsubsection{Extrait de code source}
 Voici l'histoire d'un nain capable de courir vite et de voyager loin.\\
 Dans son épopée formidable nous le suivrons une bière à la main.\\
+\lstinputlisting[language=Java]{Language.java}
+
