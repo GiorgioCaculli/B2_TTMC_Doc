@@ -5,7 +5,7 @@ Le code présent ci-dessous est celui de la fonction qui permet de rajouter une 
 Différent cas de vérification ont lieu avant de permettre à une question quelconque d'être rajoutée.
 Le premier cas sert à vérifier que l'objet en entrée ne soit pas null, si c'est le cas, alors la fonction renverra false.
 Le deuxième consiste à vérifier que l'ajout ne cause pas de doublon, si c'est le cas, l'exception QuestionDoubleException sera appelée, et false sera renvoyé comme résultat.
-Le troisième cas consiste à vérifier que le thème de la question corréspond bien à celui de la carte, si c'est pas le cas, QuestionIncompatibleException sera appelée et false sera renvoyé comme résultat.
+Le troisième cas consiste à vérifier que le thème de la question correspond bien à celui de la carte, si c'est pas le cas, QuestionIncompatibleException sera appelée et false sera renvoyé comme résultat.
 Le dernier cas de vérification consiste à vérifier qu'il n'y ait pas plus que le nombre maximal de question sur une carte, dans le cas de notre jeu ce dernier équivaut à 4.
 Si une 5\up{ème} est rajoutée, l'exception BasicCardOverMaxQuestionsException sera appelée et le résultat sera false;
 Si tous les cas de vérifications sont réussis, alors la fonction va ajouter la nouvelle question à la carte, et le résultat sera true.
@@ -65,7 +65,7 @@ public boolean add( Question q )
 \end{lstlisting}
 
 Dans les tests unitaires, cette fonction est vérifiée en lui injectant les différents cas possibles.
-Voici une partie du code des tests unitaires qui ont lieu sur BasicCard, ici on ne vérifie que les différentes intéractions avec la fonction ``add'' et on s'assure que les différents cas de vérifications soient bien respéctés.
+Voici une partie du code des tests unitaires qui ont lieu sur BasicCard, ici on ne vérifie que les différentes interactions avec la fonction ``add'' et on s'assure que les différents cas de vérifications soient bien respéctés.
 
 \begin{lstlisting}
 public class BasicCardTests
